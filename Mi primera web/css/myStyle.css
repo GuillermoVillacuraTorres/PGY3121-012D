@@ -1,0 +1,44 @@
+h1{
+    color:blue;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+#encabezado{
+    color:red;
+}
+
+
+.titulo{
+    color:blue;
+}
+
+
+p{
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+img{
+    height: 100px;
+    width: 100px;
+}
+
+.contenedor{
+    border:solid blue;
+    
+    height: 500px;
+    /* width: 50%; */
+}
+
+.contenedor1{
+    border:solid green;
+    width: 50%;
+}
+
+
+.contenedor2{
+    border:solid red;
+    width: 50%;
+}
