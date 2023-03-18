@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.boxHeader{
+    width: 30%;
+}
+
+.boxHeader img{
+    height: 60px;
+    width: 200px;
+}
+.boxHeaderData{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.contenedorHeader{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: rgb(210, 207, 207);
+}
+
+.boxHeader{
+    
+    padding-left: 15px;
+}
+
+.boxHeaderData{
+    
+}
+
+
+.contenedorHeader h3{
+    padding-right: 15px;
+    color: red;
+}
+
+a{
+    text-decoration: none;
+}
+
+.contenedorHeader h3:hover{
+    color: blue;
+}
+
+.contenedorFooter{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(210, 207, 207);
+}
+
+.miniBox{
+    width: 33.3%;
+    
+    padding: 40px;
+    text-align: justify;
+}
+
+.miniBox img{
+    height: 30px;
+    width: 30px;
+    padding-right: 15px;
+}
+
+.boxData{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.boxData h3:hover{
+    color:red;
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.box i{
+    padding-right: 15px;
+}
+
+.contenedor{
+    padding-left: 200px;
+    padding-right: 200px;
+    height: 700px;
+}
+
+body{
+    
+
+}
