@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Inicio</title>
+</head>
+
+<body>
+
+
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/img1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/img2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/img3.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+          <i id="iconCarousel" class="material-icons">chevron_left</i>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+          <i id="iconCarousel" class="material-icons">chevron_right</i>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    <!-- <div class="container d-flex flex-column align-items-center">
+        <h1>Primero</h1>
+        <h2>Segundo</h2>
+        <h3>Tercero</h3>
+    </div> -->
+
+
+    <div class="container mb-5">
+        <h1>Agregar plantas</h1>
+        <form action="#">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="txtSku" placeholder="SKU" required>
+                        <label for="floatingInput">SKU</label>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="txtNombre" placeholder="Nombre" required>
+                        <label for="floatingInput">Nombre</label>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="txtValor" placeholder="Valor" required>
+                        <label for="floatingInput">Valor</label>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="txtDescripcion" placeholder="Descripción" required>
+                        <label for="floatingInput">Descripción</label>
+                    </div>
+                </div>
+            </div>
+                <button type="submit" class="btn btn-outline-success">Guardar</button>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="container mt-5">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">SKU</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Editar - Eliminar</th>
+                </tr>
+            </thead>
+            <tbody class="">
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Tulipanes </td>
+                    <td> Planta herbácea </td>
+                    <td>$100</td>
+                    <td>
+                        <a href="editarPlanta.html">
+                            <button type="button" class="btn btn-primary">Editar</button>
+                        </a>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Eliminar
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar producto</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Desea eliminar el producto?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="btn btn-danger">Eliminar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Rosas</td>
+                    <td>Sus flores son grandes</td>
+                    <td>$500</td>
+                    <td>
+                        <button type="button" class="btn btn-primary">Editar</button>
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Eliminar
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar producto</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Desea eliminar el producto?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="btn btn-danger">Eliminar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Orquídeas</td>
+                    <td>Las orquídeas u orquidáceas</td>
+                    <td>$700</td>
+                    <td>
+                        <button type="button" class="btn btn-primary">Editar</button>
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Eliminar
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar producto</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Desea eliminar el producto?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="btn btn-danger">Eliminar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
+        integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
