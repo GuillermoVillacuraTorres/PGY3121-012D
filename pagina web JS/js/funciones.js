@@ -58,6 +58,7 @@ function sumar(n1,n2){
 sumar(50,50);
 
 
+<<<<<<< HEAD
 function eventBlur(){
     console.log("Evento BLUR");
 }
@@ -87,3 +88,6 @@ function eventDobleCLick(){
 function eventChange(){
     console.log("Evento CHANGE");
 }
+=======
+
+>>>>>>> c40cc00e4b4a24cfda962a5c86b45fefc821e38e
