@@ -14,6 +14,27 @@
         console.log("Mensaje desde el HTML");
     </script> -->
 
+    <input onblur="eventBlur()" type="text" placeholder="BLUR">
+    <br>
+    <input onfocus="eventFocus()" type="text" placeholder="FOCUS">
+    <br>
+    <input onkeydown="eventKeyDown()" type="text" placeholder="KEY DOWN">
+    <br>
+    <input onkeyup="eventKeyUp()" type="text" placeholder="KEY UP">
+    <br>
+    <button onclick="eventClick()">Presioname!!!</button>
+    <br>
+    <h3 ondblclick="eventDobleCLick()">Doble click</h3>
+    <br>
+    <select onchange="eventChange()" name="" id="">
+        <option value="1">Chile</option>
+        <option value="2">Argentina</option>
+        <option value="3">Perú</option>
+    </select>
+
+
+
+
     <script src="js/funciones.js"></script>
 </body>
 </html>

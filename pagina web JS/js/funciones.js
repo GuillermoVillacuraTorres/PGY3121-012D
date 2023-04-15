@@ -57,3 +57,33 @@ function sumar(n1,n2){
 
 sumar(50,50);
 
+
+function eventBlur(){
+    console.log("Evento BLUR");
+}
+
+
+function eventFocus(){
+    console.log("Evento FOCUS");
+}
+
+function eventKeyDown(){
+    console.log("Eveto KEY DOWN");
+}
+
+function eventKeyUp(){
+    console.log("Evento KEY UP");
+}
+
+function eventClick(){
+    console.log("Evento CLICK");
+}
+
+
+function eventDobleCLick(){
+    console.log("Evento DOBLE CLICK");
+}
+
+function eventChange(){
+    console.log("Evento CHANGE");
+}
