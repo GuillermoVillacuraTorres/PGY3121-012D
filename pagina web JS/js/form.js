@@ -18,7 +18,6 @@ function validarFormulario(){
     }
 
 
-<<<<<<< HEAD
     if (nombre.length == 0) {
         document.getElementById("valNombre").style.display = "inline";
         document.getElementById("txtNombre").classList.add("is-invalid");
@@ -36,8 +35,6 @@ function validarFormulario(){
         document.getElementById("txtApellido").classList.add("is-valid");
         document.getElementById("valApellido").style.display = "none";
     }
-=======
->>>>>>> c40cc00e4b4a24cfda962a5c86b45fefc821e38e
 
 
  /*    if (rut.length == 0) {
