@@ -22,3 +22,42 @@ $("#mostrar").mouseleave(function(){
     //$("#quinto").fadeIn();
     $("#quinto").slideDown();
 })
+
+
+$(function(){
+    $("#miFormulario").validate({
+        rules:{
+            txtRut:{
+                required:true,
+                minlength:10
+            },
+            txtNombre:{
+                required:true,
+                minlength:10
+            },
+            txtApellido:{
+                required:true,
+                minlength:10
+            },
+            txtCorreo:{
+                required:true,
+                email:true
+            }
+        },
+        messages:{
+            txtRut:{
+                required: "El rut es un campo obligatorio.",
+                minlength: "El minimo de caracteres es 10."
+            },
+            txtCorreo:{
+                required:"El correo es un campo obligatorio.",
+                email:"El formato del correo no es valido."
+            }
+        }
+    })
+})
+
+
+
+
+
