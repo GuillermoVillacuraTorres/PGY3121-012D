@@ -58,6 +58,24 @@ $(function(){
 })
 
 
+/* $(function(){
+    $("#txtBuscar").on('keyup',function(){
+        //console.log("KEYUP");
+        let valor = $(this).val().toLowerCase();
+        $("table tbody tr").filter(function(){
+            $(this).toggle($(this).text().toLowerCase().indexOf(valor) > -1)
+        })
+    })
+}) */
 
+$(function(){
+    $("#btnBuscar").on('click',function(){
+        //console.log("KEYUP");
+        let valor = $("#txtBuscar").val().toLowerCase();
+        $("table tbody tr").filter(function(){
+            $(this).toggle($(this).text().toLowerCase().indexOf(valor) > -1)
+        })
+    })
+})
 
 
