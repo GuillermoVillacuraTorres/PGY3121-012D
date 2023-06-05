@@ -1,3 +1,21 @@
+
+@font-face{
+    font-family: 'miFUente';
+    src: url('/static/fonts/sweet.ttf');
+}
+
+
 h1{
     color: green;
+    font-family: 'miFUente';
+}
+
+
+
+.container{
+    /* background-image: url('/static/img/balls.jpg'); */
+}
+
+.noSelect{
+    user-select:none
 }
