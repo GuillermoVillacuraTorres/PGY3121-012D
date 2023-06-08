@@ -10,9 +10,11 @@
 {% block body %}
 
 <div class="container">
-    <h1 class="noSelect">Este es mi sitio web con Django!</h1>
-  {% for p in prod %}
-    <div class="card" style="width: 18rem;">
+  <h2>Perros</h2>
+  <div class="row mt-5 mb-5">
+    {% for p in prod_dogs %}
+    <div class="col">
+      <div class="card" style="width: 18rem;">
         <img src="{{p.imagen}}" class="card-img-top noSelect" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{p.nombre}}</h5>
@@ -20,7 +22,26 @@
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
-      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+
+
+  <h2>Gatos</h2>
+  <div class="row mt-5 mb-5">
+    {% for p in prod_cats %}
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="{{p.imagen}}" class="card-img-top noSelect" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{p.nombre}}</h5>
+          <p class="card-text">{{p.descripcion}}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 </div>
 
 {% endblock %}
