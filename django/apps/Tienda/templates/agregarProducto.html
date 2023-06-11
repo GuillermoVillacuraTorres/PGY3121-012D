@@ -2,4 +2,45 @@
 
 {% block body %}
     <h1>Agregar productos</h1>
+
+    <div class="container mb-5 mt-5">
+        <form action="/agregarProductoForm" method="POST"> {% csrf_token %}
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="txtSku">SKU:</label>
+                    <input name="txtSku" id="txtSku" class="form-control" type="text">
+                </div>
+                <div class="col-md-6">
+                    <label for="txtPrecio">Precio:</label>
+                    <input name="txtPrecio" id="txtPrecio" class="form-control" type="text">
+                </div>
+                <div class="col-md-6">
+                    <label for="txtNombre">Nombre:</label>
+                    <input name="txtNombre" id="txtNombre" class="form-control" type="text">
+                </div>
+                <div class="col-md-6">
+                    <label for="txtImagen">Imagen:</label>
+                    <input name="txtImagen" id="txtImagen" class="form-control" type="text">
+                </div>
+                <div class="col-md-6">
+                    <label for="txtDescripcion">Descripción:</label>
+                    <input name="txtDescripcion" id="txtDescripcion" class="form-control" type="text">
+                </div>
+                <div class="col-md-6">
+                    <label for="txtStock">Stock:</label>
+                    <input name="txtStock" id="txtStock" class="form-control" type="text">
+                </div>
+                <div class="col-md-6">
+                    <label for="txtSku">Categoria:</label>
+                    <select name="cmbCategoria" id="cmbCategoria" class="form-select" aria-label="Default select example">
+                        <option disabled selected>Seleccione</option>
+                        {% for i in cate %}
+                        <option value="{{i.id_categoria}}">{{i.nombre}}</option>
+                        {% endfor %}
+                      </select>
+                </div>
+            </div>
+            <button class="btn btn-success mt-5 w-100">Agregar producto</button>
+        </form>
+    </div>
 {% endblock %}

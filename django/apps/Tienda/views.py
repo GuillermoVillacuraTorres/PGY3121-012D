@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import *
 
 # Create your views here.
@@ -12,4 +12,23 @@ def cargarInicio(request):
 
 
 def cargarAgregarProducto(request):
-    return render(request, "agregarProducto.html")
+    categorias = Categoria.objects.all()
+    return render(request, "agregarProducto.html",{"cate":categorias})
+
+
+
+def agregarProducto(request):
+    #print("AGREGANDO PRODUCTOS A LA BBDD",request.POST)
+    v_sku = request.POST['txtSku']
+    v_precio = request.POST['txtPrecio']
+    v_nombre = request.POST['txtNombre']
+    v_imagen = request.POST['txtImagen']
+    v_descripcion = request.POST['txtDescripcion']
+    v_stock = request.POST['txtStock']
+
+    v_categoria = Categoria.objects.get(id_categoria = request.POST['cmbCategoria'])
+
+    Producto.objects.create(sku = v_sku, precio = v_precio, nombre = v_nombre,imagen = v_imagen,descripcion = v_descripcion,stock = v_stock, categoria_id = v_categoria)
+
+
+    return redirect('/agregarProducto')
