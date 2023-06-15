@@ -13,7 +13,9 @@ def cargarInicio(request):
 
 def cargarAgregarProducto(request):
     categorias = Categoria.objects.all()
-    return render(request, "agregarProducto.html",{"cate":categorias})
+    productos = Producto.objects.all()
+
+    return render(request, "agregarProducto.html",{"cate":categorias,"prod":productos})
 
 
 
@@ -22,7 +24,7 @@ def agregarProducto(request):
     v_sku = request.POST['txtSku']
     v_precio = request.POST['txtPrecio']
     v_nombre = request.POST['txtNombre']
-    v_imagen = request.POST['txtImagen']
+    v_imagen = request.FILES['txtImagen']
     v_descripcion = request.POST['txtDescripcion']
     v_stock = request.POST['txtStock']
 
@@ -32,3 +34,9 @@ def agregarProducto(request):
 
 
     return redirect('/agregarProducto')
+
+
+
+def cargarEditarProducto(request,sku):
+    producto = Producto.objects.get(sku = sku)
+    return render(request,"editarProducto.html",{"prod":producto})

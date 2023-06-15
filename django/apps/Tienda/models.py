@@ -14,7 +14,7 @@ class Producto(models.Model):
     sku = models.IntegerField(primary_key=True)
     precio = models.IntegerField()
     nombre = models.CharField(max_length=50)
-    imagen = models.CharField(max_length=200)
+    imagen = models.ImageField(upload_to="imagenesProducto")
     descripcion = models.CharField(max_length=200)
     stock = models.IntegerField()
     fechaAgregar = models.DateField(auto_now_add=True)
