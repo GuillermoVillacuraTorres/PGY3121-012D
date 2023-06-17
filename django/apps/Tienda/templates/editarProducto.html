@@ -6,7 +6,7 @@
     <h1>Editar productos</h1>
 
     <div class="container mb-5 mt-5">
-        <form id="formeditarProducto" action="/agregarProductoForm" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+        <form id="formEditarProducto" action="/editarProductoForm" method="POST" enctype="multipart/form-data"> {% csrf_token %}
             <div class="row">
                 <div class="col-md-6">
                     <label for="txtSku">SKU:</label>
@@ -18,26 +18,27 @@
                 </div>
                 <div class="col-md-6">
                     <label for="txtNombre">Nombre:</label>
-                    <input name="txtNombre" id="txtNombre" class="form-control" type="text">
+                    <input value="{{prod.precio}}" name="txtNombre" id="txtNombre" class="form-control" type="text">
                 </div>
                 <div class="col-md-6">
                     <label for="txtImagen">Imagen:</label>
+                    <img src="{{prod.imagen.url}}" height="100" alt="">
                     <input name="txtImagen" id="txtImagen" class="form-control" type="file">
                 </div>
                 <div class="col-md-6">
                     <label for="txtDescripcion">Descripción:</label>
-                    <input name="txtDescripcion" id="txtDescripcion" class="form-control" type="text">
+                    <input value="{{prod.descripcion}}" name="txtDescripcion" id="txtDescripcion" class="form-control" type="text">
                 </div>
                 <div class="col-md-6">
                     <label for="txtStock">Stock:</label>
-                    <input name="txtStock" id="txtStock" class="form-control" type="text">
+                    <input value="{{prod.stock}}" name="txtStock" id="txtStock" class="form-control" type="text">
                 </div>
                 <div class="col-md-6">
                     <label for="txtSku">Categoria:</label>
                     <select name="cmbCategoria" id="cmbCategoria" class="form-select" aria-label="Default select example">
                         <option disabled selected>Seleccione</option>
                         {% for i in cate %}
-                        <option value="{{i.id_categoria}}">{{i.nombre}}</option>
+                        <option value="{{i.id_categoria}}" {% if i.id_categoria == prod.categoria_id.id_categoria %} selected {% endif %} >{{i.nombre}}</option>
                         {% endfor %}
                       </select>
                 </div>

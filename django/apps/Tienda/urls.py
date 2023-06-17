@@ -8,6 +8,9 @@ urlpatterns = [
 
     path('agregarProductoForm',views.agregarProducto),
 
-    path('editarProducto/<sku>',views.cargarEditarProducto)
+    path('editarProducto/<sku>',views.cargarEditarProducto),
+    path('editarProductoForm',views.editarProducto),
+    path('eliminarProducto/<sku>',views.eliminarProducto)
+
 
 ]
