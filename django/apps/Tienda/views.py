@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from .models import *
 import os
 from django.conf import settings
+from django.http import HttpResponse
+import json
 
 
 # Create your views here.
@@ -86,3 +88,12 @@ def eliminarProducto(request,sku):
     producto.delete()
 
     return redirect('/agregarProducto')
+
+
+def carrito(request):
+    #print("CARRITO",request.body)
+    productos = json.loads(request.body)
+    for p in productos:
+        print("SKU",p['sku'])
+        print("CANTIDAD",p['cantidad'])
+    return HttpResponse("OK!")
